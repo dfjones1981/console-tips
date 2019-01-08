@@ -1,0 +1,85 @@
+---
+name: 2. Different Ways To Log
+route: /log
+---
+
+import { Playground } from "docz";
+import Button from "./Button";
+
+# Different Ways To Log
+
+## Group
+
+## Table
+
+<Playground>
+  <Button
+    onClick={() => {
+      console.log([
+        {
+          FirstName: "Danny",
+          LastName: "Jones",
+          Score: 30
+        },
+        {
+          FirstName: "Freddie",
+          LastName: "Jones",
+          Score: 46
+        },
+        {
+          FirstName: "Violet",
+          LastName: "Jones",
+          Score: 95
+        }
+      ]);
+    }}
+  >
+    console.log
+  </Button>
+  <Button
+    onClick={() => {
+      console.group("User Details");
+      console.log({
+        FirstName: "Danny",
+        LastName: "Jones",
+        Score: 30
+      });
+      console.log({
+        FirstName: "Freddie",
+        LastName: "Jones",
+        Score: 46
+      });
+      console.log({
+        FirstName: "Violet",
+        LastName: "Jones",
+        Score: 95
+      });
+      console.groupEnd();
+    }}
+  >
+    console.group
+  </Button>
+  <Button
+    onClick={() => {
+      console.table([
+        {
+          FirstName: "Danny",
+          LastName: "Jones",
+          Score: 30
+        },
+        {
+          FirstName: "Freddie",
+          LastName: "Jones",
+          Score: 46
+        },
+        {
+          FirstName: "Violet",
+          LastName: "Jones",
+          Score: 95
+        }
+      ]);
+    }}
+  >
+    console.table
+  </Button>
+</Playground>

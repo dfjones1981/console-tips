@@ -1,0 +1,21 @@
+---
+name: 3. Debugger
+route: /debugger
+---
+
+import { Playground } from "docz";
+import Button from "./Button";
+
+# Debugger
+
+<Playground>
+  <Button
+    onClick={() => {
+      let x = 10;
+      debugger;
+      console.log(x);
+    }}
+  >
+    Debug Me!
+  </Button>
+</Playground>
