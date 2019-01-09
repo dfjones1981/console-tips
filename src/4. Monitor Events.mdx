@@ -1,19 +1,44 @@
 ---
 name: 4. Monitor Events
 route: /monitor-events
+order: 5
 ---
 
 import { Playground } from "docz";
+import Button from "./Button";
 
 # Monitor Events
 
+Automatically Log when any or specific events are fired by an element. Useful when diagnosing if an event is actually being fired, or if it's firing twice or at the wrong level etc.
+
 ## General Use
+
+```javascript
+//to monitor all events:
+monitorEvents(node);
+
+//to stop monitoring:
+unmonitorEvents(node);
+```
 
 ## Specific Use
 
-## Keywork Use
+```javascript
+//to monitor a specific event:
+monitorEvents(node, nameofevent);
+
+//to stop monitoring a specific event:
+unmonitorEvents(node, nameofevent);
+```
+
+## Keyword Use
 
 <Playground>
-  <input type="button" value="Number One" />
-  <input type="button" value="Number Two" />
+  <Button
+    onClick={() => {
+      console.log("I was clicked!");
+    }}
+  >
+    Monitor Me!
+  </Button>
 </Playground>

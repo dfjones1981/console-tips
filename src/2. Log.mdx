@@ -1,6 +1,7 @@
 ---
 name: 2. Different Ways To Log
 route: /log
+order: 3
 ---
 
 import { Playground } from "docz";
@@ -8,9 +9,15 @@ import Button from "./Button";
 
 # Different Ways To Log
 
+More than just console.log(), you can call other functions to display your logs differently.
+
 ## Group
 
+If you have a set of logs to output that are related to each other, you can group them by calling console.group() and console.groupEnd() around them.
+
 ## Table
+
+A nicer way to view an array of data is to call console.table()
 
 <Playground>
   <Button

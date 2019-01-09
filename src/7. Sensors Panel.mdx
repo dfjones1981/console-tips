@@ -1,13 +1,26 @@
 ---
 name: 7. Sensors Panel
 route: /sensors
+order: 8
 ---
 
 import { Playground } from "docz";
+import Button from "./Button";
 
 # Sensors Panel
 
+You can override most of the sensors Chrome has access to, including Location.
+
+Useful for testing location aware apps that have specific functionality when the user is at a specfic location.
+
 <Playground>
-  <input type="button" value="Number One" />
-  <input type="button" value="Number Two" />
+  <Button
+    onClick={() => {
+      navigator.geolocation.getCurrentPosition(pos => {
+        alert(pos.coords.latitude + ", " + pos.coords.longitude);
+      });
+    }}
+  >
+    Where am I?
+  </Button>
 </Playground>

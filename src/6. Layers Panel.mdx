@@ -1,13 +1,23 @@
 ---
-name: 6. Layers Panel
-route: /layers
+name: 6. Snippets
+route: /snippets
+order: 7
 ---
 
 import { Playground } from "docz";
+import Button from "./Button";
 
-# Layers Panel
+# Snippets
+
+Snippets are user defined javascript files that are stored and persisted within Chrome Dev Tools and can be executed against any page.
+
+Useful for automatic repetitive tasks, exatracting values for feedback or just breaking things.
+
+Snippets are found in a subtab on the Sources tab.
+
+Visit https://bgrins.github.io/devtools-snippets/ for a list of user submitted snippets.
 
 <Playground>
-  <input type="button" value="Number One" />
-  <input type="button" value="Number Two" />
+  <Button>First Button</Button>
+  <Button>Second Button</Button>
 </Playground>

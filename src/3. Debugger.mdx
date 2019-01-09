@@ -1,12 +1,22 @@
 ---
 name: 3. Debugger
 route: /debugger
+order: 4
 ---
 
 import { Playground } from "docz";
 import Button from "./Button";
 
 # Debugger
+
+```javascript
+// do some work
+debugger;
+// do some more work
+```
+
+Adding the debugger statement anywhere in your javascript code will cause the debugger to open when the statement is executed.
+Useful for pausing execution at a specific point with out having to find the line and attach a breakpoint
 
 <Playground>
   <Button

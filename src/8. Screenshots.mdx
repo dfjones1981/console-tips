@@ -1,19 +1,32 @@
 ---
 name: 8. Screenshots
 route: /screenshots
+order: 9
 ---
 
 import { Playground } from "docz";
+import Button from "./Button";
 
 # Screenshots
 
+Chrome Dev Tools has a few ways to save screenshots of the current page. All are accessed via the command bar which is opened via Ctrl + Shift + P.
+
 ## Full Page Screenshot
+
+To take a screenshot of the entire page, regardless of if it can fit all on the screen, run the "Capture Full Size Screenshot" command from the command bar
 
 ## Node Screenshot
 
-## Journey Screenshots
+To take a screenshot of just the currently selected element, run the "Capture node screenshot" command from the command bar
+
+## Page Load Screenshots
+
+Chrome Dev Tools can also capture multiple screenshots of the page as it loads, useful to view intermediate states as data is fetched. On the network tab, click the camera icon and then refresh the page.
 
 <Playground>
-  <input type="button" value="Number One" />
-  <input type="button" value="Number Two" />
+  <div style={{ width: "200px", fontSize: "40px" }}>
+    HERE IS A LONG SECTION OF TEXT SO THE PAGE IS HIGHER THAN THE SCREEN.
+  </div>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
 </Playground>

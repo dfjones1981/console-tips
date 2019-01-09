@@ -1,17 +1,31 @@
 ---
 name: 9. Final Bits
 route: /final
+order: 10
 ---
 
 import { Playground } from "docz";
+import Button from "./Button";
 
 # Final Bits
 
+Just a few extra bits that don't deserve their own page
+
 ## Toggle Element States
+
+You can easily view how elements look with various pseudoselectors enabled via the Elements tab. With an element selected, click the ":hov" button and enable a selector to view the element in this state
 
 ## Chromeception
 
+Chrome Dev Tools is a web app like any other! You can even inspect it. And inspect the inspector that's inspecting it...
+
+Ctrl + Alt + I while in Dev Tools.
+
+## And More...
+
+Code Coverage, Animation Viewer, Layers, Performance Recording, etc
+
 <Playground>
-  <input type="button" value="Number One" />
-  <input type="button" value="Number Two" />
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
 </Playground>

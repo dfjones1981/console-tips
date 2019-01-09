@@ -1,13 +1,30 @@
 ---
 name: 5. Eager Evaluation
 route: /eager-evaluation
+order: 6
 ---
 
 import { Playground } from "docz";
+import Button from "./Button";
 
 # Eager Evaluation
 
+A quick quality of life improvement. Enabling eager evaluation will show the result of your expression before it's executed.
+
+To enable Eager Evaluation:
+
+- Open the Console.
+- Open Console Settings (settings cog in top left)
+- Enable the Eager evaluation checkbox.
+
+DevTools does not eager evaluate if the expression causes side effects
+
 <Playground>
-  <input type="button" value="Number One" />
-  <input type="button" value="Number Two" />
+  <Button
+    onClick={() => {
+      console.log("I was clicked!");
+    }}
+  >
+    Evaluate Me (Eagerly)!
+  </Button>
 </Playground>
